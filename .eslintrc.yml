@@ -4,7 +4,8 @@ env:
 extends:
   - plugin:react/recommended
   - google
-  - 'plugin:@next/next/recommended'
+  - plugin:@next/next/recommended
+  - plugin:prettier/recommended
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -12,7 +13,6 @@ parserOptions:
   sourceType: module
 plugins:
   - react
-rules: {
-  "react/react-in-jsx-scope": "off",
-  "require-jsdoc": "off"
-}
+  - prettier
+rules:
+  {'react/react-in-jsx-scope': 'off', 'require-jsdoc': 'off', 'prettier/prettier': 'error'}
